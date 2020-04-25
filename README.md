@@ -1,3 +1,15 @@
-# Basic_PredRNN_Seq2seq
-Basic_PredRNN_Seq2seq_Radar_Prediction
-从Convlstm2D的基础上改编: https://github.com/ndrplz/ConvLSTM_pytorch 可用于雷达回波等短临预报领域,采用模仿Dr.SXJ的Seq2seq结构.
+#############################################
+#                作者:张智察                #
+#      成都信息工程大学大气科学学院2018级硕士 #
+#                 From浙江                  #
+#############################################
+从Convlstm2D的基础上改编的PredRNN:
+Convlstm2D: https://github.com/ndrplz/ConvLSTM_pytorch 
+采用NLP常用的Seq2seq结构(编码与解码)
+###########################################
+ >>>>      2020/4/25/23：00
+ >>>>      重新修复了一下Cell卷积操作的输出dim问题,
+  >>>>     并对Model.py,Seq2seq.py时间状态M的输出部分进行了简:>>>>直接用h_m取代，以更加直<<<<<<<<<<<<<<
+###########################################
+
+
