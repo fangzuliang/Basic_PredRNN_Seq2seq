@@ -61,28 +61,3 @@ for epoch in range(100):
     optimizer.step()
     print(epoch,epoch,loss_total)
 
-
-input_test = a.cuda()
-target_test = b.cuda()
-enc_hidden_test, enc_h_y_test = enc(a[0:1,:10,:,:,:].cuda())
-out_test = input_test[:, 0:0 + 1, :, :, :]
-loss_total_test = 0
-for i in range(0,20):
-    out_test, layer_h_c_test, last_h_y_test = dec(out_test, enc_hidden_test, enc_h_y_test)
-    loss_test = loss_fn(out_test, target_test[:, i:i + 1, :, :, :])
-    print(loss_test)
-    loss_total_test += loss_test
-    enc_hidden_test = layer_h_c_test
-    enc_h_y_test = last_h_y_test
-    out = out_test.cpu()
-    out = out.detach().numpy()
-    plt.axis('off')
-    plt.imshow(out[0, 0, 0, :, :],cmap='binary_r')
-    plt.savefig('C:/Users/yaoyuye/Desktop/pytorch_work/PRED/' + str(i))
-print(loss_total_test/input_test.shape[1])
-
-
-for i in range(0,20):
-    plt.axis('off')
-    plt.imshow(b[0, i, 0, :, :],cmap='binary_r')
-    plt.savefig('C:/Users/yaoyuye/Desktop/pytorch_work/ACTUAL/' + str(i))
