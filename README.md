@@ -1,9 +1,19 @@
-                作者:张智察                
-      成都信息工程大学大气科学学院2018级硕士 
-                From 浙江                  
-             大气光学与辐射方向
+作者:张智察
 
+成都信息工程大学大气科学学院2018级硕士
 
+大气光学与辐射方向
+
+Creator: ZhiCha Zhang    
+
+Chengdu University of Information Technology, School of Atmospheric Science, graduate student of 2018 class
+
+From Zhejiang
+
+resarch on Atmospheric optics and radiation
+
+ >>>>
+ >>>>
  >>>>      从Convlstm2D的基础上改编的PredRNN
  >>>>      Convlstm2D: https://github.com/ndrplz/ConvLSTM_pytorch 
  >>>>      采用NLP常用的Seq2seq结构(编码与解码)
